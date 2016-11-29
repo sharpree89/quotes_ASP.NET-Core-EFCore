@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+
+@{
+    ViewData["Title"] = "Quotes";
+}
+
+<a href="/create"><button>Add A Quote</button></a>
+
+@model IEnumerable<tutorial1.Models.Quote>
+
+<h1>Quotes</h1>
+
+@foreach (var quote in Model)
+{
+    <h4>"@quote.quote"</h4>
+    <p>- @quote.name at @quote.created_at</p>
+    <hr>
+}
